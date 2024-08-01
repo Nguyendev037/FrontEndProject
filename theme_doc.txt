@@ -1,0 +1,22 @@
+https://preview.colorlib.com/#liquorstore
+
+https://angostura.com/
+
+https://www.excellencerhum.com/en/
+
+
+Trang cần có
+
+Trang chủ				Trang Giỏ hàng
+
+Trang sản Phẩm 				Trang thanh toán
+
+Trang chi tiết sản phẩm
+
+Trang liên hệ
+
+
+Nên có scss/sass
+
+import {BrowerRouter, hashRouter } from “...”
+
