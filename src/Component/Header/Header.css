@@ -1,0 +1,41 @@
+.header-container {
+  height: auto;
+  margin: 0;
+  padding: 0;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: black;
+  opacity: 0.1; 
+}
+
+.background-nav {
+    opacity: 1;
+    z-index: 1;
+}
+
+.IconType {
+  width: 300px;
+  height: px;
+  font-family: "Spectral", serif;
+  font-weight: bold;
+  font-size: 50px
+}
+
+.IconType .text-left {
+    color: white;
+    font-weight: bold;
+}
+
+.IconType .text-right {
+    color: rgba(255, 255, 255, 0.5);
+}
+.nav-text {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-text:hover{
+    color: rgb(147,89,74);
+    font-weight: bold;
+}
+
+

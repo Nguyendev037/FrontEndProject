@@ -1,8 +1,12 @@
 import React from 'react'
-
+import Header from '../Component/Header/Header'
+import { Container } from 'reactstrap'
 export default function Homepage() {
   return (
-    <div>Homepage</div>
+    <>
+      <Header />
+      <Container></Container>
+    </>
   )
 }
 
