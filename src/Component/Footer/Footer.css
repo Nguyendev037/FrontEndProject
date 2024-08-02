@@ -1,0 +1,39 @@
+.footer {
+  background-color: #1a1a1a;
+  margin: 0 auto;
+  padding: 30px;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}
+
+.footer-item-infor {
+  align-items: center;
+  justify-content: center;
+  
+}
+.footer-list {
+  list-style: none;
+}
+
+.footer-list li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer-list a {
+  list-style-type: none;
+  list-style: none;
+  color: inherit;
+}
+
+.footer-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #b7472a;
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

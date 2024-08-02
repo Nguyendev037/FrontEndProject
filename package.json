@@ -19,6 +19,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@reduxjs/toolkit": "^2.2.7",
+    "animate.css": "^4.1.1",
     "antd": "^5.19.4",
     "axios": "^1.7.2",
     "bootstrap": "^5.3.3",
