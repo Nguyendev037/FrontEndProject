@@ -4,12 +4,24 @@
   padding: 0;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   background-color: black;
-  opacity: 0.1; 
+  opacity: 0.4;
+  z-index: 0;
 }
 
 .background-nav {
     opacity: 1;
     z-index: 1;
+    
+}
+
+.siteInforRight {
+    list-style-type: none;
+    padding: 0;
+}
+
+.siteInforRight li {
+    display: inline;
+    margin-right: 10px;
 }
 
 .IconType {
