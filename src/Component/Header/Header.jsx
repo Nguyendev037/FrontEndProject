@@ -16,7 +16,6 @@ import {
   faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { useSelector } from "react-redux";
 import { useSelector, useDispatch } from "react-redux";
 import "./Header.css";
 

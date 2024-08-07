@@ -2,16 +2,30 @@
   background-color: #1a1a1a;
   margin: 0 auto;
   padding: 30px;
-  align-items: center;
   color: white;
   font-weight: bold;
+  z-index: 10;
+  position: relative;
 }
 
+.footer::before {
+  content: "";
+  position: absolute;
+  background-image: url("../../../public/footer-icon.png");
+  background-size: cover;
+  opacity: 0.1s;
+  width: 12rem;
+  height: 12rem;
+  z-index: -1;
+  top: 60%;
+  left: 18%;
+  transform: translate(-75%, -50%);
+}
 .footer-item-infor {
   align-items: center;
   justify-content: center;
-  
 }
+
 .footer-list {
   list-style: none;
 }
@@ -32,8 +46,18 @@
   height: 50px;
   border-radius: 50%;
   background-color: #b7472a;
-  color: rgba(255, 255, 255, 0.5);
+  color: #ffffff80;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.footer-link {
+  color: #ffffff80;
+  font-size: 11px;
+  align-items: center;
+}
+.footer-location li {
+  list-style-type: none;
+  list-style: none;
 }
