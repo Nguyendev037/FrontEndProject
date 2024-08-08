@@ -1,82 +1,58 @@
 .siteInfor {
-    background-color: #a23f25;
-    color: white;
-    height: auto;
-    width: 100%;
-  }
-  
-  .siteInfor .row {
-    width: 100%;
-  }
-  
-  .social-icon {
-    text-decoration: none;
-  }
-  
-  .fixed-top {
-    top: 0;
-    z-index: 10;
-    position: fixed;
-    width: 100%;
-    background-color: white;
-  }
-  
-  .header-container {
-    height: auto;
-    margin: 0;
-    padding: 0;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  }
-  
-  .siteInforRight {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .siteInforRight li {
-    display: inline;
-    margin-right: 10px;
-  }
-  
-  .logoIcon {
-    height: auto;
-    font-family: "Spectral", serif;
-    font-weight: bold;
-    font-size: 50px;
-  }
-  
-  .logoIcon .text-left {
-    color: white;
-    font-weight: bold;
-  }
-  
-  .logoIcon .text-right {
-    color: rgba(255, 255, 255, 0.5);
-  }
-  
-  .navbar {
-    transition: top 0.3s;
-  }
-  
-  .navbar .fixed-top {
-    z-index: 10;
-    background-color: white;
-  }
-  
-  .nav-text {
-    color: rgba(255, 255, 255, 0.5);
-  }
-  
-  .nav-text:hover {
-    color: rgb(147, 89, 74);
-    font-weight: bold;
-  }
-  
-  .dropdown-toggle::after {
-    color: rgba(255, 255, 255, 0.5);
-  }
-  
-  .navbar-toggler-icon {
-    color: white;
-  }
-  
+  background-color: #a23f25;
+  color: white;
+  height: auto;
+  width: 100%;
+}
+
+.siteInfor .row {
+  width: 100%;
+}
+
+.social-icon {
+  text-decoration: none;
+}
+
+.siteInforRight {
+  list-style-type: none;
+  padding: 0;
+}
+
+.siteInforRight li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.navbar-toggler-icon {
+  color: white !important;
+}
+
+.logoIcon {
+  height: auto;
+  font-family: "Spectral", serif;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.logoIcon .text-left {
+  color: white;
+  font-weight: bold;
+}
+
+.logoIcon .text-right {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+
+.nav-header {
+  z-index:10;
+}
+
+.dropdown-toggle-split::after {
+  color: #626262;
+}
+
+
+.nav-content {
+  color : #626262;
+}

@@ -1,0 +1,18 @@
+
+
+type
+
+quantity
+
+image:
+
+	ảnh 1	:
+	ảnh 2	:
+	ảnh 3	:
+	ảnh 4	:
+	ảnh 5 	:
+	ảnh 6	:
+	ảnh 7	:
+	ảnh 8	:
+	ảnh 9	:
+	ảnh 10	:

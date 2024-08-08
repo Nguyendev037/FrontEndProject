@@ -1,9 +1,13 @@
 
-.BackgroundImage {
+.hero {
     background-size:cover;
     background-repeat: none;
-    height: 100vh;
+    max-height: 100vh;
     width: 100vw;
+    background: linear-gradient(rga(8,0,58,0.7), rgba(8,0,58,07)) ;
+    background-size: cover;
+    background-position: cover;
+    color: white
 }
 
 .container {

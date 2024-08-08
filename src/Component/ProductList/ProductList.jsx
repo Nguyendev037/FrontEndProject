@@ -36,16 +36,19 @@ export default function ProductList() {
 
   return (
     <div className="product-list">
-      <Container>
-        <Row>
+      <Container fluid>
+        <Row className="g-4">
           {status === "loading" && <p>Loading....</p>}
           {status === "succeeded" &&
             productList.map((product) => (
-              <Col lg={4} md={6} sm={12} key={product.id}>
-                <Card style={{ width: "18rem" }}>
-                  <img alt="Sample" src={`/${product.liquidImage}`} />
-                  <CardBody>s
-                    <CardTitle tag="h5">{product.name}</CardTitle>
+              <Col lg={4} md={6} sm={12} key={product.id} g-u>
+                <Card style={{ width: "20rem"}} className="card-image">
+                  <img
+                    alt="Sample"
+                    src={`FrontEndProject/${product.liquidImage}`}
+                  />
+                  <CardBody>
+                    s<CardTitle tag="h5">{product.name}</CardTitle>
                     <CardSubtitle className="mb-2 text-muted" tag="h6">
                       {product.price}
                     </CardSubtitle>
@@ -62,13 +65,13 @@ export default function ProductList() {
         </Row>
         {status === "succeeded" && (
           <ReactPaginate
-            previousLabel={"previous"}
-            nextLabel={"next"}
+            previousLabel={"<"}
+            nextLabel={">"}
             breakLabel={"..."}
             breakClassName={"break-me"}
             pageCount={totalPages}
-            marginPagesDisplayed={2}
-            pageRangeDisplayed={5}
+            marginPagesDisplayed={1}
+            pageRangeDisplayed={2}
             onPageChange={handlePageClick}
             containerClassName={"pagination"}
             subContainerClassName={"pages pagination"}

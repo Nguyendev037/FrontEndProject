@@ -1,12 +1,4 @@
 import React, { useEffect, useState } from "react";
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-} from "reactstrap";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -16,16 +8,29 @@ import {
   faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  NavbarText,
+  Container,
+} from "reactstrap";
 import { useSelector, useDispatch } from "react-redux";
 import "./Header.css";
 
 export default function Header() {
-
   const itemCartHeader = useSelector((state) => state.cart.cart);
 
-  const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
-  const [navbar, setNavbar] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
 
   return (
     <>
@@ -65,136 +70,100 @@ export default function Header() {
         </div>
       </div>
 
-      <nav className="navbar navbar-expand-lg navbar-light bg-transparent">
-        <div className="container-fluid">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarTogglerDemo03"
-            aria-controls="navbarTogglerDemo03"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <a className="navbar-brand" href="#">
-            Navbar
-          </a>
-          <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <NavLink to="/" className="active"></NavLink>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Link
-                </a>
-              </li>
-              <li className="nav-item">
+      <Navbar className="nav-header navbar-expand-lg navbar-expand-md bg-transparent">
+        <Container className=" d-flex flex-row align-items-between">
+          <NavbarBrand href="/" className="me-auto">
+            <NavLink to="/">
+              <span style={{ fontSize: "25px", color: "#cdcdcd" }}>
+                Liquire
+              </span>{" "}
+              <span style={{ color: "#626262", fontSize: "25px" }}>Store</span>
+            </NavLink>
+          </NavbarBrand>
+          <NavbarToggler onClick={toggle} />
+
+          <Collapse isOpen={isOpen} navbar>
+            <Nav className="ms-auto navbar-expand-lg navbar-expand-md" navbar>
+              <NavItem className="me-2">
+                <NavLink to="/">
+                  <span className="nav-content">Home</span>
+                </NavLink>
+              </NavItem>
+              <NavItem className="me-3 nav-content">
+                <NavLink to="/">
+                  <span className="nav-content">About</span>
+                </NavLink>
+              </NavItem>
+              <NavItem className="me-3 nav-content">
+                <NavLink to="/product">
+                  <span className="nav-content">Product</span>
+                </NavLink>
+              </NavItem>
+              <NavItem className="me-3 nav-content">
+                <NavLink to="/">
+                  <span className="nav-content">Blog</span>
+                </NavLink>
+              </NavItem>
+              <NavItem className="me-3 nav-content">
+                <NavLink to="/">
+                  <span className="nav-content">Blog</span>
+                </NavLink>
+              </NavItem>
+            </Nav>
+            <NavItem className="mx-2">
+              <div className="order-lg-last btn-group">
                 <a
-                  className="nav-link disabled"
-                  href="#"
-                  tabindex="-1"
-                  aria-disabled="true"
+                  href=""
+                  className="btn-cart dropdown-toggle dropdown-toggle-split"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
                 >
-                  Disabled
+                  <span className="position-relative">
+                    <FontAwesomeIcon
+                      icon={faCartShopping}
+                      style={{ color: "rgba(255, 255, 255, 0.5)" }}
+                    />
+                    {itemCartHeader.length !== 0 ? (
+                      <div className="position-absolute itemCurrent">
+                        {itemCartHeader.length}
+                      </div>
+                    ) : (
+                      ""
+                    )}
+                  </span>
                 </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+                <div className="dropdown-menu">
+                  {itemCartHeader &&
+                    itemCartHeader.map((item) => (
+                      <div key={item.id}>
+                        <NavLink to={`/product/:${item.id}`}>
+                          <div className="dropdown-item d-flex align-items-start">
+                            <div
+                              className="img"
+                              style={{
+                                backgroundImage: `url(${item.image})`,
+                              }}
+                            ></div>
+                            <div className="text pl-3">
+                              <h4>{item.name}</h4>
+                            </div>
+                            <div className="mb-0">
+                              <a className="price">{item.price}</a>
+                              <span className="nav-text">
+                                Quantity: {item.quantity}
+                              </span>
+                            </div>
+                          </div>
+                        </NavLink>
+                      </div>
+                    ))}
+                </div>
+              </div>
+            </NavItem>
+          </Collapse>
+        </Container>
+      </Navbar>
     </>
   );
 }
-
-/*
-<Navbar
-        className={`navbar navbar-expand-lg navbar-expand-md header-container bg-dark ${
-          isFixed ? "fixed-top" : ""
-        }`}
-      >
-        <Container>
-          <NavbarBrand href="/" className="logoIcon">
-            <span className="text-left">Liquor</span>{" "}
-            <span className="text-right">Store</span>
-          </NavbarBrand>
-          <NavbarToggler onClick={toggle} />
-          <Collapse isOpen={isOpen} navbar className="collapse-container">
-            <Nav navbar className="ms-auto mb-lg-0">
-              <NavItem className="mx-2">
-                <NavLink to="/" className="active nav-text">
-                  Home
-                </NavLink>
-              </NavItem>
-              <NavItem className="mx-2">
-                <NavLink to="/" className="nav-text">
-                  Shop
-                </NavLink>
-              </NavItem>
-              <NavItem className="mx-2">
-                <NavLink to="/" className="nav-text">
-                  About
-                </NavLink>
-              </NavItem>
-              <NavItem className="mx-2">
-                <NavLink to="/" className="nav-text">
-                  Contact
-                </NavLink>
-              </NavItem>
-              <NavItem className="mx-2">
-                <div className="order-lg-last btn-group">
-                  <a
-                    href=""
-                    className="btn-cart dropdown-toggle dropdown-toggle-split"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    <span className="position-relative">
-                      <FontAwesomeIcon
-                        icon={faCartShopping}
-                        style={{ color: "rgba(255, 255, 255, 0.5)" }}
-                      />
-                      {itemCartHeader.length !== 0 ? (
-                        <div className="position-absolute itemCurrent">
-                          {itemCartHeader.length}
-                        </div>
-                      ) : (
-                        ""
-                      )}
-                    </span>
-                  </a>
-                  <div className="dropdown-menu">
-                    {itemCartHeader &&
-                      itemCartHeader.map((item) => (
-                        <div key={item.id}>
-                          <NavLink to={`/product/:${item.id}`}>
-                            <div className="dropdown-item d-flex align-items-start">
-                              <div
-                                className="img"
-                                style={{
-                                  backgroundImage: `url(${item.image})`,
-                                }}
-                              ></div>
-                              <div className="text pl-3">
-                                <h4>{item.name}</h4>
-                              </div>
-                              <div className="mb-0">
-                                <a className="price">{item.price}</a>
-                                <span className="nav-text">
-                                  Quantity: {item.quantity}
-                                </span>
-                              </div>
-                            </div>
-                          </NavLink>
-                        </div>
-                      ))}
-                  </div>
-                </div>
-              </NavItem>
-            </Nav>
-          </Collapse>
-        </Container>
-      </Navbar>*/

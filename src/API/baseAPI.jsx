@@ -6,20 +6,29 @@ export const baseAxios = axios.create({
   baseURL: baseURL,
 });
 
-export const fetchData = async (page = 1) => {
+export const fetchTotalCount = async () => {
   try {
-    const response = await baseAxios.get(`?page=${page}&limit=9`);
-    return {
-      data: response.data,
-      totalPages: Math.ceil(response.headers["x-total-count"] / 9),
-    };
+    const response = await baseAxios.get("");
+    return response.data.length;
   } catch (error) {
     console.log("error: ", error);
     throw error;
   }
 };
 
-
+export const fetchData = async (page = 1, limit = 9) => {
+  try {
+    const totalCount = await fetchTotalCount();
+    const response = await baseAxios.get(`?page=${page}&limit=9`);
+    return {
+      data: response.data,
+      totalPages: Math.ceil(totalCount / limit),
+    };
+  } catch (error) {
+    console.log("error: ", error);
+    throw error;
+  }
+};
 
 export const fetchDataId = async (id) => {
   try {
