@@ -70,21 +70,18 @@ export default function Header() {
         </div>
       </div>
 
-      <Navbar className="nav-header navbar-expand-lg navbar-expand-md bg-transparent">
-        <Container className=" d-flex flex-row align-items-between">
-          <NavbarBrand href="/" className="me-auto">
-            <NavLink to="/">
-              <span style={{ fontSize: "25px", color: "#cdcdcd" }}>
-                Liquire
-              </span>{" "}
-              <span style={{ color: "#626262", fontSize: "25px" }}>Store</span>
-            </NavLink>
-          </NavbarBrand>
-          <NavbarToggler onClick={toggle} />
-
-          <Collapse isOpen={isOpen} navbar>
+      <Navbar className="nav-header navbar-expand-lg navbar-expand-md bg-dark">
+        <Container className="nav navbar">
+        <NavbarBrand href="/" className="me-auto">
+          <NavLink to="/">
+            <span style={{ fontSize: "30px", color: "#cdcdcd", fontWeight:"bold" }}>Liquire</span>{" "}
+            <span style={{ color: "#626262", fontSize: "30px" }}>Store</span>
+          </NavLink>
+        </NavbarBrand>
+        <NavbarToggler onClick={toggle} />
+          <Collapse isOpen={isOpen} navbar >
             <Nav className="ms-auto navbar-expand-lg navbar-expand-md" navbar>
-              <NavItem className="me-2">
+              <NavItem className="me-3">
                 <NavLink to="/">
                   <span className="nav-content">Home</span>
                 </NavLink>
@@ -104,13 +101,8 @@ export default function Header() {
                   <span className="nav-content">Blog</span>
                 </NavLink>
               </NavItem>
-              <NavItem className="me-3 nav-content">
-                <NavLink to="/">
-                  <span className="nav-content">Blog</span>
-                </NavLink>
-              </NavItem>
             </Nav>
-            <NavItem className="mx-2">
+            <NavItem className="me-3">
               <div className="order-lg-last btn-group">
                 <a
                   href=""
