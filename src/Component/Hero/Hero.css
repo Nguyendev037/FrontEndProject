@@ -1,23 +1,51 @@
 .hero {
   background-size: cover;
-  background-repeat: none;
-  max-height: 100vh;
+  background-repeat: no-repeat;
+  height: 850px;
   width: 100vw;
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
   background-size: cover;
   background-position: center;
   color: white;
-  position: absolute;
+  position: relative;
+  background-image: url("../Images/Hero/imageHero4.jpg");
+  z-index: 0;
+  background-position: 50% 15%;
 }
 
+.overlayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  opacity: 0.4;
+  background: #000000;
+  z-index: 1;
+}
 
-
-
-.container {
+.heroContent {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
+  z-index: 2;
 }
 
+.buttonHero {
+  background: #b7472a !important;
+  border: 1px solid #b7472a !important;
+  color: #fff !important;
+}
 
+.buttonHeroWhite {
+  border: 1px solid white !important;
+  background: transparent !important;
+  color: #fff !important;
+}
+
+.buttonHeroWhite:hover {
+  background-color: #b7472a;
+  font-size: 30px
+}

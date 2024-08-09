@@ -11,7 +11,7 @@
 .footer::before {
   content: "";
   position: absolute;
-  background-image: url("../../../public/footer-icon.png");
+  background-image: url("./footer-icon.png");
   background-size: cover;
   opacity: 0.1s;
   width: 12rem;
