@@ -7,9 +7,8 @@ export default function Homepage() {
   return (
     <>
       <Header />
-      <Hero />
       <Container></Container>
-      <Footer />
+      <Footer />  
     </>
   );
 }

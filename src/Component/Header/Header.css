@@ -1,8 +1,9 @@
 .siteInfor {
   background-color: #a23f25;
   color: white;
-  height: auto;
+  height: 30px;
   width: 100%;
+  border-radius: 15px 15px 0 0;
 }
 
 .siteInfor .row {
@@ -11,16 +12,12 @@
 
 .social-icon {
   text-decoration: none;
+  transform: translateY(-3px);
 }
 
 .siteInforRight {
   list-style-type: none;
   padding: 0;
-}
-
-.siteInforRight li {
-  display: inline;
-  margin-right: 10px;
 }
 
 li {
@@ -29,35 +26,69 @@ li {
 
 .navbar-toggler {
   background-color: white;
-  border: none
+  border: none;
 }
 
 .logoIcon {
   height: auto;
   font-family: "Spectral", serif;
   font-weight: bold;
-  font-size: 50px;
+  font-size: 10px;
 }
 
 .dropdown-toggle-split::after {
-  color: #626262;
+  display: none;
+}
+/* End site infor */
+
+/* Start Nav */
+
+.nav-header {
+  width: 100 vh;
+  height: auto;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: black !important;
+}
+.fixed-top-scroll {
+  background-color: white !important;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  z-index: 10;
 }
 
-
-
+.logoIcon {
+  font-family: "Spectral", serif;
+}
 
 .nav-content {
-  color : #626262;
+  color: #626262;
   position: relative;
   display: inline-block;
   font-size: 20px;
 }
 
-.nav-content:hover {
+.nav-content-white {
+  color: black;
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: light;
+}
+
+.nav-content:hover, 
+.nav-content-white:hover{
   color: #a23f25;
 }
 
-.nav-content::before {
+.nav-content::before,
+.nav-content-white::before {
   content: "";
   width: 0;
   height: 2px;
@@ -68,6 +99,12 @@ li {
   transition: width 0.3s ease;
 }
 
-.nav-content:hover:before {
+.nav-content:hover:before,
+.nav-content-white:hover:before {
   width: 100%;
+}
+
+.navbar-toggler {
+  background-color: white;
+  border: none;
 }

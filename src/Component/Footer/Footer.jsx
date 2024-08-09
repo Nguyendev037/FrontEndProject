@@ -12,6 +12,7 @@ import {
 import { Container, Row, Col } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Footer.css";
+
 export default function Footer() {
   return (
     <div className="footer">
