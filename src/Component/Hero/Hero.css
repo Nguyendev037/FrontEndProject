@@ -22,25 +22,46 @@
   content: "";
   opacity: 0.4;
   background: #000000;
-  z-index: 1;
+  z-index: -1;
 }
 
-.container {
+.hero-content {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-  z-index: 2;
+  z-index: 1;
+  transform: rotate(-8deg);
 }
 
-.btn.btn-primary {
+.hero-content .text h1 {
+  font-size: 80px;
+  line-height: 1.1;
+  font-weight: 700;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.1);
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #fff;
+}
+
+.hero-content .text h1 span {
+  color: #b7472a;
+  -webkit-text-fill-color: #fff;
+  -webkit-text-stroke-width: 0px;
+}
+
+.buttonHero {
+  background: #b7472a;
+  border: 1px solid #b7472a;
+  color: #ffff;
+}
+
+.buttonHeroWhite {
+  border: 1px solid white;
+  color: #fff;
+}
+
+.buttonHero-White:hover {
   background: #b7472a !important;
-  border: 1px solid #b7472a !important;
-  color: #fff !important;
-}
-
-.btn.btn-white.btn-outline-white {
-  border: 1px solid white !important;
-  background: transparent !important;
-  color: #fff !important;
 }
