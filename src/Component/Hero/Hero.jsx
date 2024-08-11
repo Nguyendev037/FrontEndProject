@@ -3,17 +3,18 @@ import "./Hero.css";
 import "animate.css";
 import { Container, Row, Col, Button } from "reactstrap";
 import { NavLink } from "react-router-dom";
-export default function Hero() {
+import classNames from "classnames"; 
+export default function Hero({ variant  }) {
   return (
-    <section className="hero">
+    <section className={classNames("hero", { "hero-2": variant === "small" })}>
       <div className="overlayer"></div>
       <Container className="hero-content">
-        <Row noGutters className="algin-items-center justify-content-center">
+        <Row className="algin-items-center justify-content-center">
           <Col md={8}>
             <div className="d-flex algin-items-end  animate__animated animate__fadeInUp ">
               <div class="text w-100 text-center">
                 <h1 class="mb-4">
-                  Good  <span>Drink</span> for Good <span>Moments</span> .
+                  Good <span>Drink</span> for Good <span>Moments</span> .
                 </h1>
                 <p>
                   <NavLink to="/product">
@@ -22,7 +23,10 @@ export default function Hero() {
                     </Button>
                   </NavLink>
                   <NavLink to="/contact">
-                    <Button style={{backgroundColor:"transparent"}}className="buttonHero-White btn btn-white btn-outline-white py-2 px-4 ms-2">
+                    <Button
+                      style={{ backgroundColor: "transparent" }}
+                      className="buttonHero-White btn btn-white btn-outline-white py-2 px-4 ms-2"
+                    >
                       Read More
                     </Button>
                   </NavLink>

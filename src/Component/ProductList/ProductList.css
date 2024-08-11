@@ -1,10 +1,17 @@
+
+.product-select {
+  display: inline-block;
+}
+
+.dropDown{
+  display: inline;
+}
+
 .card-image  img {
-  width: 100%;
+  width: 350px;
   height: 400px;
   object-fit: cover;
 }
-
-
 
 .pagination {
     display: flex;
