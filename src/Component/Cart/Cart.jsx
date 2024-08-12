@@ -115,7 +115,7 @@ export default function Cart() {
                         <td>
                           <ButtonGroup className="mt-3">
                             <Button
-                              className="button rounded-5 "
+                              className=" button-cart  button rounded-5 "
                               onClick={() =>
                                 dispatch(
                                   updateQty({ flag: false, id: item.id })
@@ -126,7 +126,7 @@ export default function Cart() {
                             </Button>
                             <span className="mx-3">{item.qty}</span>
                             <Button
-                              className="button rounded-5 "
+                              className=" button-cart  button rounded-5 "
                               onClick={() =>
                                 dispatch(updateQty({ flag: true, id: item.id }))
                               }
@@ -140,7 +140,7 @@ export default function Cart() {
                         </td>
                         <td>
                           <Button
-                            className=" button mt-3"
+                            className="button-cart button mt-3"
                             onClick={() => dispatch(removeCart(item.id))}
                           >
                             X
@@ -150,7 +150,7 @@ export default function Cart() {
                     ))}
                   </tbody>
                 </Table>
-                <Button className="button mb-3" onClick={() => handle_clear()}>
+                <Button className=" button-cart  button mb-3" onClick={() => handle_clear()}>
                   Clear
                 </Button>
               </>
@@ -189,7 +189,7 @@ export default function Cart() {
                 </Button>
               ) : (
                 <Button
-                  className="button rounded-pill px-4 py-3 text-uppercase mb-4 ms-4"
+                  className="button button-cart rounded-pill px-4 py-3 text-uppercase mb-4 ms-4"
                   type="button"
                   onClick={() => paymentCheckout()}
                 >

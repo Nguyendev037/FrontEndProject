@@ -13,7 +13,7 @@
   background-position: 50% 15%;
 }
 
-.hero-2{
+.hero-2 {
   height: 400px;
 }
 
@@ -26,21 +26,40 @@
   content: "";
   opacity: 0.4;
   background: #000000;
-  z-index: 1;
+  z-index: -1;
 }
 
-.heroContent {
+.hero-content {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
   z-index: 2;
+  transform: rotate(-4deg);
 }
+
+.hero-content h1 {
+  line-height: 1.1;
+  font-weight: 700;
+  font-style: italic;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #fff;
+}
+
+.hero-content text span {
+  color: #b7472a;
+  -webkit-text-fill-color: #fff;
+  -webkit-text-stroke-width: 0px;
+}
+
 
 .buttonHero {
   background: #b7472a !important;
   border: 1px solid #b7472a !important;
   color: #fff !important;
+  margin-right: 5px;
 }
 
 .buttonHeroWhite {
@@ -50,6 +69,5 @@
 }
 
 .buttonHeroWhite:hover {
-  background-color: #b7472a;
-  font-size: 30px
+  background-color: #b7472a !important;
 }
