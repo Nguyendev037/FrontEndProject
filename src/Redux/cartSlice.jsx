@@ -12,8 +12,12 @@ const initialState = {
 };
 
 let data = [];
-data = await fetchDataAll();
-console.log("data: ", data);
+async function initializeData() {
+  data = await fetchDataAll();
+  console.log("data: ", data);
+}
+
+initializeData();
 
 const cartSlice = createSlice({
   name: "carts",
