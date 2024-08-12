@@ -30,9 +30,21 @@ export const fetchData = async (page = 1, limit = 9) => {
   }
 };
 
+export const fetchDataAll = async () => {
+  try {
+    const response = await baseAxios.get("");
+    console.log("response: ", response);
+    return response.data;
+  } catch (error) {
+    console.log("error: ", error);
+    throw error;
+  }
+};
+
 export const fetchDataId = async (id) => {
   try {
     const response = await baseAxios.get(`/${id}`);
+    console.log("response: ", response);
     return response.data;
   } catch (error) {
     console.log("error:", error);

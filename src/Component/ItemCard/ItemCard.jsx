@@ -10,9 +10,25 @@ import {
   Button,
 } from "reactstrap";
 import { NavLink } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addCart } from "../../Redux/cartSlice";
+import Swal from "sweetalert2";
 import { Images } from "../Images/Images";
 export default function ItemCard({ item }) {
-  console.log("item: ", item);
+
+  const dispatch = useDispatch()
+
+  const handle_addCart = (item) => {
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Sản phẩm thêm vào trong giỏ hàng",
+      showConfirmButton: false,
+      timer: 1000,
+    });
+    dispatch(addCart(item));
+  };
+
   return (
     <div className="card-item animate__animated animate__fadeInUp">
       <Card
@@ -41,7 +57,12 @@ export default function ItemCard({ item }) {
                 Product Detai
               </Button>
             </NavLink>
-            <Button className=" buttonItem btn btn-sucess">Add to Card</Button>
+            <Button
+              onClick={() => handle_addCart(item)}
+              className=" buttonItem btn btn-sucess"
+            >
+              Add to Card
+            </Button>
           </div>
         </CardBody>
       </Card>

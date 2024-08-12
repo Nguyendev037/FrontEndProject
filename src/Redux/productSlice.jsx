@@ -15,7 +15,7 @@ export const fetchItemId = createAsyncThunk(
   "products/fetchDataID",
   async (id) => {
     const response = await fetchDataId(id);
-    console.log("response: ", response.data);
+    console.log("response: ", response);
     return response;
   }
 );
@@ -46,6 +46,7 @@ const productSlice = createSlice({
         state.status = "succeeded";
         state.productList = action.payload.data;
         state.totalPages = action.payload.totalPages;
+        console.log('action.payload: ', action.payload);
       })
       .addCase(fetchPaginatedData.rejected, (state, action) => {
         state.status = "failed";

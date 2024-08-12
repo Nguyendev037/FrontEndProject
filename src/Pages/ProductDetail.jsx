@@ -12,7 +12,6 @@ const ProductDetail = () => {
   const { status, error, selectedProduct } = useSelector(
     (state) => state.product
   );
-  const [item, setItem] = useState(null);
 
   useEffect(() => {
     if (id) {
@@ -20,20 +19,13 @@ const ProductDetail = () => {
     }
   }, [dispatch, id]);
 
-  useEffect(() => {
-    if (selectedProduct) {
-      setItem(selectedProduct);
-    }
-  }, [selectedProduct]);
-
-  console.log("item: ", item);
-
+  console.log("selectedProduct: ", selectedProduct);
   return (
     <div>
       <Header />
       <Hero variant="small" />
       {status === "loading" && <p>Loading....</p>}
-      {status === "succeeded" && <DetailProduct item={item} />}
+      {status === "succeeded" && <DetailProduct item={selectedProduct} />}
       {status === "error" && <p>{error}</p>}
       <Footer />
     </div>

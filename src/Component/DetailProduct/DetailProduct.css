@@ -1,5 +1,5 @@
-.DetailProdct {
-  padding: 6rem 0px;
+.DetailProduct {
+  padding: 6rem 0;
 }
 
 .imageProduct {
@@ -13,6 +13,29 @@
   font-weight: 400;
 }
 
+.detailName {
+  font-family: "Spectral", serif;
+}
+
 .rating a {
   color: #b7472a;
+}
+
+.rating .star {
+  font-size: 20px;
+}
+
+.itemPrice {
+  font-size: 30px;
+  font-weight: lighter;
+  color: black;
+}
+
+.des {
+  font-family: "Spectral", serif;
+  background: #fff;
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: 300;
+  color: gray;
 }
