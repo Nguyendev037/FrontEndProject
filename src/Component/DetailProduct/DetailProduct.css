@@ -1,0 +1,18 @@
+.DetailProdct {
+  padding: 6rem 0px;
+}
+
+.imageProduct {
+  background-size: cover;
+  max-width: 100%;
+  height: auto;
+}
+
+.detailInfor {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.rating a {
+  color: #b7472a;
+}

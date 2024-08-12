@@ -1,34 +1,49 @@
-.card-image  img {
-  width: 100%;
+.product-select {
+  display: inline-block;
+}
+
+.dropDown {
+  display: inline;
+}
+
+.card-image img {
+  width: 350px;
   height: 400px;
   object-fit: cover;
 }
 
-
-
 .pagination {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-  }
-  
-  .pagination li {
-    margin: 0 5px;
-    cursor: pointer;
-  }
-  
-  .pagination li a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .pagination li a:hover {
-    text-decoration: underline;
-  }
-  
-  .pagination li.active a {
-    font-weight: bold;
-    text-decoration: underline;
-  }
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.pagination li {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.pagination li a {
+  color: #b7472a;
+  text-align: center;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  border: 1px solid #e6e6e6;
+  transition: ease-in-out 0.3s;
+}
+
+.pagination li a:hover {
+  text-decoration: underline;
+  background-color: #b7472a;
+  color: white!important
+}
+
+.pagination .active {
+  color: #007bff;
+  border-radius: 5px;
+}

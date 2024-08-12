@@ -1,0 +1,103 @@
+.intro {
+  background-color: #b7472a;
+  padding: 30px;
+}
+
+.intro .icon {
+  font-size: 60px;
+  color: white;
+  margin-right: 20px;
+}
+
+.intro h2 {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+}
+
+.intro p {
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/*section intro 2*/
+
+.intro-2,
+.intro-3 {
+  padding: 6rem 0;
+}
+
+.intro-2-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  width: 50%;
+}
+
+.intro-2-heading .subHeading {
+  display: inline-block;
+  margin-bottom: 0;
+  color: #b7472a;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
+  position: relative;
+}
+
+.yearIntro-2 {
+  font-size: 30px;
+  color: black;
+}
+
+.yearIntro-2 .number {
+  font-style: italic;
+  color: #b7472a;
+  margin-right: 5px;
+}
+
+.liquid-type {
+  padding-bottom: 30px;
+}
+
+.liquid-type h3 {
+    font-weight: lighter;
+}
+
+.kind-image {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 0;
+  background-position: center;
+  background-size: cover;
+}
+
+.kind-image::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  top: -10%;
+  left: -10%;
+  right: -10%;
+  bottom: -10%;
+  z-index: -1;
+  border: 1px solid #b7472a;
+  transition: all 0.6s ease;
+}
+
+.kind-image:hover::after {
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  bottom: 10%;
+  border: 1px solid gray;
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.4); ;
+  
+}

@@ -13,6 +13,10 @@
   background-position: 50% 15%;
 }
 
+.hero-2{
+  height: 400px;
+}
+
 .overlayer {
   position: absolute;
   top: 0;

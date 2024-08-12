@@ -22,7 +22,7 @@ import {
   NavbarText,
   Container,
 } from "reactstrap";
-import Hero from "../Hero/Hero";
+// import Hero from "../Hero/Hero";
 import { useSelector, useDispatch } from "react-redux";
 import "./Header.css";
 
@@ -335,7 +335,7 @@ export default function Header() {
         </Container>
       </Navbar>
 
-      <Hero />
+      {/* <Hero /> */}
     </>
   );
 }

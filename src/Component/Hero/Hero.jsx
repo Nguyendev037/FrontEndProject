@@ -3,12 +3,13 @@ import "./Hero.css";
 import "animate.css";
 import { Container, Row, Col, Button } from "reactstrap";
 import { NavLink } from "react-router-dom";
-export default function Hero() {
+import classNames from "classnames"; 
+export default function Hero({ variant  }) {
   return (
-    <section className="hero">
+    <section className={classNames("hero", { "hero-2": variant === "small" })}>
       <div className="overlayer"></div>
-      <Container className="heroContent">
-        <Row noGutters className="algin-items-center justify-content-center">
+      <Container className="hero-content">
+        <Row className="algin-items-center justify-content-center">
           <Col md={8}>
             <div className="d-flex algin-items-end  animate__animated animate__fadeInUp ">
               <div class="text w-100 text-center">
