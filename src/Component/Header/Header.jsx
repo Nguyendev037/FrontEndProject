@@ -176,7 +176,7 @@ export default function Header() {
                         }}
                       />
                       {carts.length !== 0 ? (
-                        <div className="position-absolute itemCurrent">
+                        <div className="position-absolute itemCurrent text-center">
                           {carts.length}
                         </div>
                       ) : (

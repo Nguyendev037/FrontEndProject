@@ -57,6 +57,19 @@ export default function Cart() {
     });
   };
 
+
+  const paymentCheckout = () => {
+    Swal.fire({
+      title: "Thanh Toán Thành Công",
+      text: "Thanh Toán Thành Công",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    })
+  };
+
   return (
     <Container fluid className="py-5">
       <Container className="py-5">
@@ -73,9 +86,9 @@ export default function Cart() {
             ) : (
               <>
                 <Table hover>
-                  <thead>
-                    <tr>
-                      <th>#</th>
+                  <thead className="tableCart">
+                    <tr className="tableCartHeader text-center">
+                      <th>Image</th>
                       <th>Name</th>
                       <th>Price</th>
                       <th>Qty</th>
@@ -118,7 +131,7 @@ export default function Cart() {
                                 dispatch(updateQty({ flag: true, id: item.id }))
                               }
                             >
-                              <FontAwesomeIcon icon={faMinus} />
+                              <FontAwesomeIcon icon={faPlus} />
                             </Button>
                           </ButtonGroup>
                         </td>
@@ -178,7 +191,7 @@ export default function Cart() {
                 <Button
                   className="button rounded-pill px-4 py-3 text-uppercase mb-4 ms-4"
                   type="button"
-                  onClick={() => navigate("/checkout")}
+                  onClick={() => paymentCheckout()}
                 >
                   Thanh toán
                 </Button>

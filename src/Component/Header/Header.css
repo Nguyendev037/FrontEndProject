@@ -108,3 +108,13 @@ li {
   background-color: white;
   border: none;
 }
+
+.itemCurrent {
+  background-color: #a23f25!important;
+  color: white;
+  border-radius: 50%;
+  width:20px;
+  height: auto;
+  top: -70%;
+  right: -90%;
+}
